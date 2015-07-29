@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ServicioRest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>Jersey Web Application</servlet-name>
+  <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+  <load-on-startup>1</load-on-startup>
+  
+</servlet>
+<servlet-mapping>
+  <servlet-name>Jersey Web Application</servlet-name>
+  <url-pattern>/rest/*</url-pattern>
+</servlet-mapping>
+
+
+
+
+
+ <servlet>
+        <description>Usuarios Activos</description>
+        <display-name>ListaDepartamento</display-name>
+        <servlet-name>ListaDepartamento</servlet-name>
+        <servlet-class>com.ejemplo.servlet.ListaDepartamento</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListaDepartamento</servlet-name>
+        <url-pattern>/ListaDepartamento</url-pattern>
+     </servlet-mapping>
+
+   	 
+	   	 <servlet>
+   	     <description>Servlet Listado por Departtamentos</description>
+   	     <display-name>EmpleadosPorDepartamento</display-name>
+   	     <servlet-name>EmpleadosPorDepartamento</servlet-name>
+   	     <servlet-class>com.ejemplo.servlet.EmpleadosPorDepartamento</servlet-class>
+   	 </servlet>
+   	 <servlet-mapping>
+   	     <servlet-name>EmpleadosPorDepartamento</servlet-name>
+   	     <url-pattern>/EmpleadosPorDepartamento</url-pattern>
+   	 </servlet-mapping>   	 
+
+</web-app>
